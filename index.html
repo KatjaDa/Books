@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Library</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<article>
+    <H1>Welcome to Library</H1>
+    <p>Here you can add and search books</p>
+</article>
+<div class="mb-3">
+    <label for="formFile" class="form-label">Add your books here</label>
+    <input class="form-control" type="file" id="formFile" accept=".txt">
+</div>
+<section>
+    <p id="printFile"></p>
+    <button id="saveBooksFile" class="btn btn-primary">Save books</button>
+</section>
+<form id="bookForm" method="post">
+    <h3>Add a new book</h3>
+    <div class="form-group">
+        <label for="bookName" class="control-label">Name of the book</label>
+        <input type="text" class="form-control" id="bookName" name="bookName" placeholder="Moby Dick, max. lenght 30" required maxlength="30">
+    </div>
+    <div class="form-group">
+        <label for="writer" class="control-label">Writer</label>
+        <input type="text" class="form-control" id="writer" name="writer" placeholder="Herman Melville, max. lenght 30" required maxlength="30">
+    </div>
+    <div class="form-group">
+        <label for="isbn" class="control-label">ISBN</label>
+        <input type="text" class="form-control" id="isbn" name="isbn" placeholder="9780850670356, max. lenght 20" required maxlength="20">
+    </div>
+    <div class="form-group">
+        <label for="published" class="control-label">Publishing year</label>
+        <input type="text" class="form-control" id="published" name="published" placeholder="1981, max lenght 4" required pattern="[0-9]{4}">
+    </div>
+    <div class="form-group">
+        <button id="addBtn" class="btn btn-primary">Add</button>
+    </div>
+</form>
+<article id="results">
+    <h3>Show and edit saved books</h3>
+    <button id="searchBtn" class="btn btn-primary">Get All Books</button>
+</article>
+<button id="deleteBtn" class="btn btn-primary">Delete All Books</button>
+<script src="scripts/library.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

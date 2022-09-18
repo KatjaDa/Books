@@ -1,0 +1,12 @@
+body{
+    margin: 2rem;
+}
+
+input {
+    max-width: 40rem;
+}
+
+button {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
